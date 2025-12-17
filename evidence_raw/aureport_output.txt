@@ -1,0 +1,38 @@
+
+Failed Summary Report
+======================
+Range of time in logs: 12/16/2025 00:51:09.038 - 12/16/2025 23:40:02.784
+Selected time for report: 12/16/2025 00:51:09 - 12/16/2025 23:40:02.784
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 0
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 2
+Number of terminals: 3
+Number of host names: 1
+Number of executables: 3
+Number of commands: 1
+Number of files: 1
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 1
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 1
+Number of process IDs: 5
+Number of events: 5
+
+
+User Summary Report
+===========================
+total  auid
+===========================
+286  1000
+216  -1
+52  0
+5  127

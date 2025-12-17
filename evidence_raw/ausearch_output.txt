@@ -1,0 +1,489 @@
+----
+type=PROCTITLE msg=audit(12/16/2025 00:56:47.690:92) : proctitle=auditctl -w /etc/passwd -p wa -k passwd-changes 
+type=SYSCALL msg=audit(12/16/2025 00:56:47.690:92) : arch=aarch64 syscall=sendto success=yes exit=1084 a0=0x4 a1=0xfffff9f59c80 a2=0x43c a3=0x0 items=0 ppid=11376 pid=11377 auid=cephas uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts3 ses=2 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 00:56:47.690:92) : auid=cephas ses=2 subj=unconfined op=add_rule key=passwd-changes list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 00:57:14.660:99) : proctitle=auditctl -a always,exit -F path /etc/passwd -F perm wa -k passwd-changes 
+type=SOCKADDR msg=audit(12/16/2025 00:57:14.660:99) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 00:57:14.660:99) : arch=aarch64 syscall=sendto success=yes exit=1084 a0=0x4 a1=0xffffef8d1220 a2=0x43c a3=0x0 items=0 ppid=11599 pid=11600 auid=cephas uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts3 ses=2 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 00:57:14.660:99) : auid=cephas ses=2 subj=unconfined op=add_rule key=passwd-changes list=exit res=no 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:13.444:113) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SYSCALL msg=audit(12/16/2025 22:33:13.444:113) : arch=aarch64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0xfffff19f1210 a2=0x43c a3=0x0 items=0 ppid=4058 pid=4077 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 22:33:13.444:113) : auid=unset ses=unset subj=unconfined op=add_rule key=passwd-changes list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:41.388:13) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SYSCALL msg=audit(12/16/2025 23:24:41.388:13) : arch=aarch64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0xffffcc8e0d60 a2=0x43c a3=0x0 items=0 ppid=566 pid=598 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 23:24:41.388:13) : auid=unset ses=unset subj=unconfined op=add_rule key=passwd-changes list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 00:58:12.407:112) : proctitle=auditctl -w /etc/shadow -p rwa -k shadow-access 
+type=PATH msg=audit(12/16/2025 00:58:12.407:112) : item=0 name=/etc/ inode=1048577 dev=fe:03 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 00:58:12.407:112) : cwd=/home/cephas 
+type=SOCKADDR msg=audit(12/16/2025 00:58:12.407:112) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 00:58:12.407:112) : arch=aarch64 syscall=sendto success=yes exit=1080 a0=0x4 a1=0xffffc0bd9ef0 a2=0x438 a3=0x0 items=1 ppid=12083 pid=12084 auid=cephas uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts3 ses=2 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 00:58:12.407:112) : auid=cephas ses=2 subj=unconfined op=add_rule key=shadow-access list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 00:58:28.354:115) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 00:58:28.354:115) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 00:58:28.354:115) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 00:58:28.354:115) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff96828fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=12219 pid=12220 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 00:58:28.358:120) : proctitle=auditctl -a always,exit -F path /etc/shadow -F perm rwa -k shadow-access 
+type=SOCKADDR msg=audit(12/16/2025 00:58:28.358:120) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 00:58:28.358:120) : arch=aarch64 syscall=sendto success=yes exit=1080 a0=0x4 a1=0xffffe0647700 a2=0x438 a3=0x0 items=0 ppid=12221 pid=12222 auid=cephas uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts3 ses=2 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 00:58:28.358:120) : auid=cephas ses=2 subj=unconfined op=add_rule key=shadow-access list=exit res=no 
+----
+type=PROCTITLE msg=audit(12/16/2025 00:58:56.645:123) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 00:58:56.645:123) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 00:58:56.645:123) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 00:58:56.645:123) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff84f28fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=12452 pid=12453 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 00:59:22.861:130) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 00:59:22.861:130) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 00:59:22.861:130) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 00:59:22.861:130) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff86708fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=12667 pid=12668 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:13.444:114) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(12/16/2025 22:33:13.444:114) : item=0 name=/etc/ inode=1048577 dev=fe:03 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:13.444:114) : cwd=/ 
+type=SOCKADDR msg=audit(12/16/2025 22:33:13.444:114) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 22:33:13.444:114) : arch=aarch64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0xfffff19f1210 a2=0x438 a3=0x0 items=1 ppid=4058 pid=4077 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 22:33:13.444:114) : auid=unset ses=unset subj=unconfined op=add_rule key=shadow-access list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:23.328:119) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:33:23.328:119) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:23.328:119) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:33:23.328:119) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff94b18fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4167 pid=4168 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:53.407:126) : proctitle=/usr/sbin/unix_chkpwd partner nullok 
+type=PATH msg=audit(12/16/2025 22:33:53.407:126) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:53.407:126) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:33:53.407:126) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff87788fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4425 pid=4426 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:57.947:127) : proctitle=/usr/sbin/unix_chkpwd partner nullok 
+type=PATH msg=audit(12/16/2025 22:33:57.947:127) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:57.947:127) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:33:57.947:127) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff86948fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4425 pid=4459 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:57.991:129) : proctitle=/usr/sbin/unix_chkpwd partner chkexpiry 
+type=PATH msg=audit(12/16/2025 22:33:57.991:129) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:57.991:129) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:33:57.991:129) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff88eb8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4425 pid=4468 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:57.995:132) : proctitle=su - partner 
+type=PATH msg=audit(12/16/2025 22:33:57.995:132) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:57.995:132) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:33:57.995:132) : arch=aarch64 syscall=openat success=yes exit=4 a0=AT_FDCWD a1=0xffffb88e8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=2142 pid=4425 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=su exe=/usr/bin/su subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:10.003:135) : proctitle=/usr/sbin/unix_chkpwd partner nullok 
+type=PATH msg=audit(12/16/2025 22:34:10.003:135) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:10.003:135) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:10.003:135) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb4678fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4581 pid=4582 auid=cephas uid=root gid=partner euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:14.991:136) : proctitle=/usr/sbin/unix_chkpwd partner nullok 
+type=PATH msg=audit(12/16/2025 22:34:14.991:136) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:14.991:136) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:14.991:136) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb00e8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4581 pid=4623 auid=cephas uid=root gid=partner euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:15.043:138) : proctitle=/usr/sbin/unix_chkpwd partner chkexpiry 
+type=PATH msg=audit(12/16/2025 22:34:15.043:138) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:15.043:138) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:15.043:138) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb2c58fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4581 pid=4632 auid=cephas uid=root gid=partner euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:28.823:142) : proctitle=/usr/sbin/unix_chkpwd partner nullok 
+type=PATH msg=audit(12/16/2025 22:34:28.823:142) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:28.823:142) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:28.823:142) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb5598fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4737 pid=4738 auid=cephas uid=root gid=partner euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:33.651:143) : proctitle=/usr/sbin/unix_chkpwd partner nullok 
+type=PATH msg=audit(12/16/2025 22:34:33.651:143) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:33.651:143) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:33.651:143) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff99928fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4737 pid=4779 auid=cephas uid=root gid=partner euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:33.695:145) : proctitle=/usr/sbin/unix_chkpwd partner chkexpiry 
+type=PATH msg=audit(12/16/2025 22:34:33.695:145) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:33.695:145) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:33.695:145) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff89fa8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=4737 pid=4780 auid=cephas uid=root gid=partner euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:44.698:153) : proctitle=cat /etc/shadow 
+type=PATH msg=audit(12/16/2025 22:34:44.698:153) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:44.698:153) : cwd=/home/partner 
+type=SYSCALL msg=audit(12/16/2025 22:34:44.698:153) : arch=aarch64 syscall=openat success=no exit=EACCES(Permission denied) a0=AT_FDCWD a1=0xffffef3a15d8 a2=O_RDONLY a3=0x0 items=1 ppid=4469 pid=4895 auid=cephas uid=partner gid=partner euid=partner suid=partner fsuid=partner egid=partner sgid=partner fsgid=partner tty=pts2 ses=2 comm=cat exe=/usr/bin/cat subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:01.418:156) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 22:35:01.418:156) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:01.418:156) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 22:35:01.418:156) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff96d78fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5034 pid=5035 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:03.686:165) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:35:03.686:165) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:03.686:165) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:35:03.686:165) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb7c08fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5055 pid=5056 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:31.566:173) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:35:31.566:173) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:31.566:173) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:35:31.566:173) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffa1ac8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5285 pid=5286 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:42.621:181) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:35:42.621:181) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:42.621:181) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:35:42.621:181) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb0e68fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5379 pid=5380 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:39:01.454:188) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 22:39:01.454:188) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:39:01.454:188) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 22:39:01.454:188) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffa97b8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=6979 pid=6980 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:39:21.969:197) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:39:21.969:197) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:39:21.969:197) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:39:21.969:197) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb2c18fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=7155 pid=7156 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:39:32.301:207) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:39:32.301:207) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:39:32.301:207) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:39:32.301:207) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb61b8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=7290 pid=7291 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:45:01.479:216) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 22:45:01.479:216) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:45:01.479:216) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 22:45:01.479:216) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff97188fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=9930 pid=9931 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:45:11.201:224) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:45:11.201:224) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:45:11.201:224) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:45:11.201:224) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff8b518fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=10007 pid=10042 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:46:14.042:225) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:46:14.042:225) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:46:14.042:225) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:46:14.042:225) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff90158fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=10545 pid=10567 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:46:18.770:226) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:46:18.770:226) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:46:18.770:226) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:46:18.770:226) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffbdbd8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=10545 pid=10608 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:46:18.802:227) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:46:18.802:227) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:46:18.802:227) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:46:18.802:227) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff90b58fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=10545 pid=10609 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:52:00.434:230) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:52:00.434:230) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:52:00.434:230) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:52:00.434:230) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffaf4c8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=13416 pid=13451 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:52:05.821:231) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:52:05.821:231) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:52:05.821:231) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:52:05.821:231) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff82d78fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=13416 pid=13492 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:52:05.869:232) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:52:05.869:232) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:52:05.869:232) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:52:05.869:232) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff89f28fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=13416 pid=13493 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:55:01.525:233) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 22:55:01.525:233) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:55:01.525:233) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 22:55:01.525:233) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffadd48fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=14969 pid=14970 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:56:38.545:242) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:56:38.545:242) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:56:38.545:242) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:56:38.545:242) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff886a8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=15760 pid=15761 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:56:45.009:243) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 22:56:45.009:243) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:56:45.009:243) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:56:45.009:243) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffafc48fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=15760 pid=15818 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:56:45.049:245) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:56:45.049:245) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:56:45.049:245) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:56:45.049:245) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff91038fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=15760 pid=15819 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:58:52.812:251) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 22:58:52.812:251) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:58:52.812:251) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 22:58:52.812:251) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb23c8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=16871 pid=16872 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts2 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:04:50.710:258) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:04:50.710:258) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:04:50.710:258) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:04:50.710:258) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xfffface38fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=19764 pid=19791 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:05:01.574:259) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 23:05:01.574:259) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:05:01.574:259) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 23:05:01.574:259) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff907f8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=19880 pid=19881 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:09:01.599:267) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 23:09:01.599:267) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:09:01.599:267) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 23:09:01.599:267) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff9a678fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=21804 pid=21805 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:41.388:14) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(12/16/2025 23:24:41.388:14) : item=0 name=/etc/ inode=1048577 dev=fe:03 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:41.388:14) : cwd=/ 
+type=SOCKADDR msg=audit(12/16/2025 23:24:41.388:14) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 23:24:41.388:14) : arch=aarch64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0xffffcc8e0d60 a2=0x438 a3=0x0 items=1 ppid=566 pid=598 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 23:24:41.388:14) : auid=unset ses=unset subj=unconfined op=add_rule key=shadow-access list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:41.480:23) : proctitle=/usr/libexec/accounts-daemon 
+type=PATH msg=audit(12/16/2025 23:24:41.480:23) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:41.480:23) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:41.480:23) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xaaab0b3e7d00 a2=O_RDONLY a3=0x0 items=1 ppid=1 pid=573 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=accounts-daemon exe=/usr/libexec/accounts-daemon subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:41.484:24) : proctitle=/usr/libexec/accounts-daemon 
+type=PATH msg=audit(12/16/2025 23:24:41.484:24) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:41.484:24) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:41.484:24) : arch=aarch64 syscall=openat success=yes exit=9 a0=AT_FDCWD a1=0xffff80be8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=1 pid=573 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=accounts-daemon exe=/usr/libexec/accounts-daemon subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:43.012:44) : proctitle=/usr/libexec/accounts-daemon 
+type=PATH msg=audit(12/16/2025 23:24:43.012:44) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:43.012:44) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:43.012:44) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xffff78001280 a2=O_RDONLY a3=0x0 items=1 ppid=1 pid=573 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=accounts-daemon exe=/usr/libexec/accounts-daemon subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:43.012:45) : proctitle=/usr/libexec/accounts-daemon 
+type=PATH msg=audit(12/16/2025 23:24:43.012:45) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:43.012:45) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:43.012:45) : arch=aarch64 syscall=openat success=yes exit=9 a0=AT_FDCWD a1=0xffff80be8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=1 pid=573 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=accounts-daemon exe=/usr/libexec/accounts-daemon subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:43.036:47) : proctitle=lightdm --session-child 17 20 
+type=PATH msg=audit(12/16/2025 23:24:43.036:47) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:43.036:47) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:43.036:47) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xffff92e78fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=694 pid=726 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=lightdm exe=/usr/sbin/lightdm subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:43.104:49) : proctitle=/usr/sbin/unix_chkpwd lightdm chkexpiry 
+type=PATH msg=audit(12/16/2025 23:24:43.104:49) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:43.104:49) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:43.104:49) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb9e98fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=732 pid=734 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:43.104:53) : proctitle=(systemd) 
+type=PATH msg=audit(12/16/2025 23:24:43.104:53) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:43.104:53) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:43.104:53) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xffffa98b8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=1 pid=732 auid=lightdm uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=1 comm=(systemd) exe=/usr/lib/systemd/systemd-executor subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:50.400:58) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:24:50.400:58) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:50.400:58) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:50.400:58) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffa5948fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=832 pid=833 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:54.424:60) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:24:54.424:60) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:54.424:60) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:54.424:60) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff82f88fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=832 pid=835 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:54.468:62) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 23:24:54.468:62) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:54.468:62) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:54.468:62) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffa4f28fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=832 pid=836 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:54.516:68) : proctitle=lightdm --session-child 13 24 
+type=PATH msg=audit(12/16/2025 23:24:54.516:68) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:54.516:68) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:54.516:68) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xffffb4f38fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=694 pid=832 auid=cephas uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=2 comm=lightdm exe=/usr/sbin/lightdm subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:54.548:70) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 23:24:54.548:70) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:54.548:70) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:54.548:70) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff85768fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=844 pid=845 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:54.552:74) : proctitle=(systemd) 
+type=PATH msg=audit(12/16/2025 23:24:54.552:74) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:54.552:74) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:24:54.552:74) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xffff99fb8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=1 pid=844 auid=cephas uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=3 comm=(systemd) exe=/usr/lib/systemd/systemd-executor subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:25:01.256:85) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 23:25:01.256:85) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:25:01.256:85) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 23:25:01.256:85) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffbcaa8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=1379 pid=1380 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:25:04.936:95) : proctitle=/usr/libexec/accounts-daemon 
+type=PATH msg=audit(12/16/2025 23:25:04.936:95) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:25:04.936:95) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:25:04.936:95) : arch=aarch64 syscall=openat success=yes exit=8 a0=AT_FDCWD a1=0xaaab0b405b90 a2=O_RDONLY a3=0x0 items=1 ppid=1 pid=573 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=accounts-daemon exe=/usr/libexec/accounts-daemon subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:25:04.936:96) : proctitle=/usr/libexec/accounts-daemon 
+type=PATH msg=audit(12/16/2025 23:25:04.936:96) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:25:04.936:96) : cwd=/ 
+type=SYSCALL msg=audit(12/16/2025 23:25:04.936:96) : arch=aarch64 syscall=openat success=yes exit=9 a0=AT_FDCWD a1=0xffff80be8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=1 pid=573 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=accounts-daemon exe=/usr/libexec/accounts-daemon subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:33:38.569:99) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:33:38.569:99) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:33:38.569:99) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:33:38.569:99) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff92648fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5549 pid=5576 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:33:47.277:100) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:33:47.277:100) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:33:47.277:100) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:33:47.277:100) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffae8d8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5549 pid=5651 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:33:47.313:101) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 23:33:47.313:101) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:33:47.313:101) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:33:47.313:101) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffbc4a8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=5549 pid=5652 auid=cephas uid=cephas gid=cephas euid=cephas suid=cephas fsuid=cephas egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:35:01.294:102) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 23:35:01.294:102) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:35:01.294:102) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 23:35:01.294:102) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffb3ed8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=6311 pid=6312 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:01.315:110) : proctitle=/usr/sbin/unix_chkpwd root chkexpiry 
+type=PATH msg=audit(12/16/2025 23:39:01.315:110) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:01.315:110) : cwd=/var/spool/cron 
+type=SYSCALL msg=audit(12/16/2025 23:39:01.315:110) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff89898fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=8245 pid=8246 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=unset comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:08.411:121) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:39:08.411:121) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:08.411:121) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:39:08.411:121) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff847d8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=8348 pid=8349 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts0 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:15.524:122) : proctitle=/usr/sbin/unix_chkpwd cephas nullok 
+type=PATH msg=audit(12/16/2025 23:39:15.524:122) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:15.524:122) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:39:15.524:122) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff9ca28fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=8348 pid=8406 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts0 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:15.568:124) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 23:39:15.568:124) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:15.568:124) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:39:15.568:124) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff99b08fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=8348 pid=8407 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts0 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:31.064:132) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 23:39:31.064:132) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:31.064:132) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:39:31.064:132) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffffa6918fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=8540 pid=8541 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts0 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:42.992:140) : proctitle=/usr/sbin/unix_chkpwd cephas chkexpiry 
+type=PATH msg=audit(12/16/2025 23:39:42.992:140) : item=0 name=/etc/shadow inode=1048898 dev=fe:03 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:42.992:140) : cwd=/home/cephas 
+type=SYSCALL msg=audit(12/16/2025 23:39:42.992:140) : arch=aarch64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0xffff992c8fa8 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=8642 pid=8643 auid=cephas uid=root gid=cephas euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=pts0 ses=2 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unconfined key=shadow-access 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:13.444:115) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(12/16/2025 22:33:13.444:115) : item=0 name=/usr/bin/ inode=524725 dev=fe:03 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:13.444:115) : cwd=/ 
+type=SOCKADDR msg=audit(12/16/2025 22:33:13.444:115) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 22:33:13.444:115) : arch=aarch64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0xfffff19f1210 a2=0x438 a3=0x0 items=1 ppid=4058 pid=4077 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 22:33:13.444:115) : auid=unset ses=unset subj=unconfined op=add_rule key=sudo-exec list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:33:23.320:118) : proctitle=sudo auditctl -l 
+type=PATH msg=audit(12/16/2025 22:33:23.320:118) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:33:23.320:118) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:33:23.320:118) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:33:23.320:118) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:33:23.320:118) : argc=3 a0=sudo a1=auditctl a2=-l 
+type=SYSCALL msg=audit(12/16/2025 22:33:23.320:118) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30628 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=4167 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:09.991:134) : proctitle=sudo apt update 
+type=PATH msg=audit(12/16/2025 22:34:09.991:134) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:34:09.991:134) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:34:09.991:134) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:09.991:134) : cwd=/home/partner 
+type=EXECVE msg=audit(12/16/2025 22:34:09.991:134) : argc=3 a0=sudo a1=apt a2=update 
+type=SYSCALL msg=audit(12/16/2025 22:34:09.991:134) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xaaaabd792a40 a1=0xaaaabd852e30 a2=0xaaaabd6f4920 a3=0xffffaf59bb28 items=3 ppid=4469 pid=4581 auid=cephas uid=partner gid=partner euid=root suid=root fsuid=root egid=partner sgid=partner fsgid=partner tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:34:28.811:141) : proctitle=sudo /bin/systemctl restart apache2 
+type=PATH msg=audit(12/16/2025 22:34:28.811:141) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:34:28.811:141) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:34:28.811:141) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:34:28.811:141) : cwd=/home/partner 
+type=EXECVE msg=audit(12/16/2025 22:34:28.811:141) : argc=4 a0=sudo a1=/bin/systemctl a2=restart a3=apache2 
+type=SYSCALL msg=audit(12/16/2025 22:34:28.811:141) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xaaaabd84f7b0 a1=0xaaaabd818330 a2=0xaaaabd6f4920 a3=0xffffaf59bb28 items=3 ppid=4469 pid=4737 auid=cephas uid=partner gid=partner euid=root suid=root fsuid=root egid=partner sgid=partner fsgid=partner tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:03.670:164) : proctitle=sudo ausearch -k passwd-changes -i 
+type=PATH msg=audit(12/16/2025 22:35:03.670:164) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:35:03.670:164) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:35:03.670:164) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:03.670:164) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:35:03.670:164) : argc=5 a0=sudo a1=ausearch a2=-k a3=passwd-changes a4=-i 
+type=SYSCALL msg=audit(12/16/2025 22:35:03.670:164) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30be0 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=5055 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:31.554:172) : proctitle=sudo ausearch -k shadow-access -i 
+type=PATH msg=audit(12/16/2025 22:35:31.554:172) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:35:31.554:172) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:35:31.554:172) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:31.554:172) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:35:31.554:172) : argc=5 a0=sudo a1=ausearch a2=-k a3=shadow-access a4=-i 
+type=SYSCALL msg=audit(12/16/2025 22:35:31.554:172) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30be0 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=5285 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:35:42.609:180) : proctitle=sudo ausearch -k sudo-exec -i 
+type=PATH msg=audit(12/16/2025 22:35:42.609:180) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:35:42.609:180) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:35:42.609:180) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:35:42.609:180) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:35:42.609:180) : argc=5 a0=sudo a1=ausearch a2=-k a3=sudo-exec a4=-i 
+type=SYSCALL msg=audit(12/16/2025 22:35:42.609:180) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30bd0 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=5379 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:39:21.953:196) : proctitle=sudo aureport --failed --summary 
+type=PATH msg=audit(12/16/2025 22:39:21.953:196) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:39:21.953:196) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:39:21.953:196) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:39:21.953:196) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:39:21.953:196) : argc=4 a0=sudo a1=aureport a2=--failed a3=--summary 
+type=SYSCALL msg=audit(12/16/2025 22:39:21.953:196) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30b90 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=7155 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:39:32.289:206) : proctitle=sudo aureport -u --summary 
+type=PATH msg=audit(12/16/2025 22:39:32.289:206) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:39:32.289:206) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:39:32.289:206) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:39:32.289:206) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:39:32.289:206) : argc=4 a0=sudo a1=aureport a2=-u a3=--summary 
+type=SYSCALL msg=audit(12/16/2025 22:39:32.289:206) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30b68 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=7290 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:56:38.537:241) : proctitle=sudo ./privilege_escalation_monitor.sh 
+type=PATH msg=audit(12/16/2025 22:56:38.537:241) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:56:38.537:241) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:56:38.537:241) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:56:38.537:241) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:56:38.537:241) : argc=2 a0=sudo a1=./privilege_escalation_monitor.sh 
+type=SYSCALL msg=audit(12/16/2025 22:56:38.537:241) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30ae0 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=15760 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 22:58:52.804:250) : proctitle=sudo ./privilege_escalation_monitor.sh 
+type=PATH msg=audit(12/16/2025 22:58:52.804:250) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:58:52.804:250) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 22:58:52.804:250) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 22:58:52.804:250) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 22:58:52.804:250) : argc=2 a0=sudo a1=./privilege_escalation_monitor.sh 
+type=SYSCALL msg=audit(12/16/2025 22:58:52.804:250) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffe57343a0 a1=0xffff93a30ae0 a2=0xaaab1abdf170 a3=0x0 items=3 ppid=2142 pid=16871 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts2 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:24:41.388:15) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(12/16/2025 23:24:41.388:15) : item=0 name=/usr/bin/ inode=524725 dev=fe:03 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:24:41.388:15) : cwd=/ 
+type=SOCKADDR msg=audit(12/16/2025 23:24:41.388:15) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(12/16/2025 23:24:41.388:15) : arch=aarch64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0xffffcc8e0d60 a2=0x438 a3=0x0 items=1 ppid=566 pid=598 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(12/16/2025 23:24:41.388:15) : auid=unset ses=unset subj=unconfined op=add_rule key=sudo-exec list=exit res=yes 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:08.391:120) : proctitle=sudo cp /var/log/audit/audit.log /home/cephas/evidence_raw/ 
+type=PATH msg=audit(12/16/2025 23:39:08.391:120) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:08.391:120) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:08.391:120) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:08.391:120) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 23:39:08.391:120) : argc=4 a0=sudo a1=cp a2=/var/log/audit/audit.log a3=/home/cephas/evidence_raw/ 
+type=SYSCALL msg=audit(12/16/2025 23:39:08.391:120) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffdbfcc8b0 a1=0xffff94d59738 a2=0xaaaad2490170 a3=0x0 items=3 ppid=5716 pid=8348 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts0 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:31.052:131) : proctitle=sudo ausearch -k passwd-changes -i 
+type=PATH msg=audit(12/16/2025 23:39:31.052:131) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:31.052:131) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:31.052:131) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:31.052:131) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 23:39:31.052:131) : argc=5 a0=sudo a1=ausearch a2=-k a3=passwd-changes a4=-i 
+type=SYSCALL msg=audit(12/16/2025 23:39:31.052:131) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffdbfcc8b0 a1=0xffff94d59b28 a2=0xaaaad2490170 a3=0x0 items=3 ppid=5716 pid=8540 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts0 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:42.980:139) : proctitle=sudo ausearch -k shadow-access -i 
+type=PATH msg=audit(12/16/2025 23:39:42.980:139) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:42.980:139) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:42.980:139) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:42.980:139) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 23:39:42.980:139) : argc=5 a0=sudo a1=ausearch a2=-k a3=shadow-access a4=-i 
+type=SYSCALL msg=audit(12/16/2025 23:39:42.980:139) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffdbfcc8b0 a1=0xffff94d59b28 a2=0xaaaad2490170 a3=0x0 items=3 ppid=5716 pid=8642 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts0 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 
+----
+type=PROCTITLE msg=audit(12/16/2025 23:39:53.276:149) : proctitle=sudo ausearch -k sudo-exec -i 
+type=PATH msg=audit(12/16/2025 23:39:53.276:149) : item=2 name=/lib/ld-linux-aarch64.so.1 inode=532261 dev=fe:03 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:53.276:149) : item=1 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(12/16/2025 23:39:53.276:149) : item=0 name=/usr/bin/sudo inode=554854 dev=fe:03 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(12/16/2025 23:39:53.276:149) : cwd=/home/cephas 
+type=EXECVE msg=audit(12/16/2025 23:39:53.276:149) : argc=5 a0=sudo a1=ausearch a2=-k a3=sudo-exec a4=-i 
+type=SYSCALL msg=audit(12/16/2025 23:39:53.276:149) : arch=aarch64 syscall=execve success=yes exit=0 a0=0xffffdbfcc8b0 a1=0xffff94d59fc0 a2=0xaaaad2490170 a3=0x0 items=3 ppid=5716 pid=8732 auid=cephas uid=cephas gid=cephas euid=root suid=root fsuid=root egid=cephas sgid=cephas fsgid=cephas tty=pts0 ses=2 comm=sudo exe=/usr/bin/sudo subj=unconfined key=sudo-exec 

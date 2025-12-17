@@ -1,0 +1,15 @@
+[2025-12-16 23:40:47] === Sanitization Session Started ===
+[2025-12-16 23:40:47] Sanitizing: audit.log (/home/cephas/evidence_raw/audit.log)
+[2025-12-16 23:46:34] === Sanitization Session Started ===
+[2025-12-16 23:46:34] Sanitizing: audit.log (/home/cephas/evidence_raw/audit.log)
+[2025-12-16 23:46:34] ✓ Sanitized: 918 lines → 918 lines
+[2025-12-16 23:46:34] WARN: No timestamps found in /home/cephas/evidence_sanitized/audit_sanitized.log
+[2025-12-16 23:46:34] ✓ Event IDs preserved in /home/cephas/evidence_sanitized/audit_sanitized.log (1018 found)
+[2025-12-16 23:46:34] Sanitizing: ausearch_output.txt (/home/cephas/evidence_raw/ausearch_output.txt)
+[2025-12-16 23:46:34] ✓ Sanitized: 489 lines → 489 lines
+[2025-12-16 23:46:34] WARN: No timestamps found in /home/cephas/evidence_sanitized/ausearch_output_sanitized.txt
+[2025-12-16 23:46:34] ✓ Event IDs preserved in /home/cephas/evidence_sanitized/ausearch_output_sanitized.txt (512 found)
+[2025-12-16 23:46:34] Sanitizing: aureport_output.txt (/home/cephas/evidence_raw/aureport_output.txt)
+[2025-12-16 23:46:34] ✓ Sanitized: 38 lines → 38 lines
+[2025-12-16 23:46:34] WARN: No timestamps found in /home/cephas/evidence_sanitized/aureport_output_sanitized.txt
+[2025-12-16 23:46:34] WARN: No event IDs found in /home/cephas/evidence_sanitized/aureport_output_sanitized.txt
