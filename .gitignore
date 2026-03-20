@@ -1,0 +1,13 @@
+# Local environment / secrets
+.env
+
+# Logs
+*.log
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# Python cache (if ever used)
+__pycache__/
+*.pyc
