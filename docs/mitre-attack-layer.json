@@ -1,0 +1,28 @@
+{
+  "name": "Privilege Escalation Detection Lab — Coverage",
+  "versions": {"attack": "14", "navigator": "5.1.0", "layer": "4.5"},
+  "domain": "enterprise-attack",
+  "description": "Detection coverage for the Red & Blue Team Privilege Escalation Detection Lab. Red = actively detected via auditd. Orange = simulated/partial.",
+  "filters": {"platforms": ["Linux"]},
+  "layout": {"layout": "side", "showName": true, "showID": true, "expandedSubtechniques": "annotated"},
+  "techniques": [
+    {"techniqueID": "T1548.001", "tactic": "privilege-escalation", "score": 100, "color": "#FF0000", "comment": "DETECTED: suid_modification, suid_execution keys. Playbook: playbooks/suid-binaries.md"},
+    {"techniqueID": "T1548.003", "tactic": "privilege-escalation", "score": 100, "color": "#FF0000", "comment": "DETECTED: sudo-exec, sudo-config keys. Playbook: playbooks/failed-sudo.md"},
+    {"techniqueID": "T1547.006", "tactic": "persistence",          "score": 100, "color": "#FF0000", "comment": "DETECTED: module_loading key. Playbook: playbooks/kernel-module-loading.md"},
+    {"techniqueID": "T1053.003", "tactic": "privilege-escalation", "score": 100, "color": "#FF0000", "comment": "DETECTED: cron_tampering key. Playbook: playbooks/cron-tampering.md"},
+    {"techniqueID": "T1053.003", "tactic": "persistence",          "score": 100, "color": "#FF0000", "comment": "DETECTED: same cron_tampering detection covers persistence tactic."},
+    {"techniqueID": "T1003",     "tactic": "credential-access",    "score": 100, "color": "#FF0000", "comment": "DETECTED: sensitive_file_access key. Playbook: playbooks/shadow-access.md"},
+    {"techniqueID": "T1566",     "tactic": "initial-access",       "score": 50,  "color": "#FFA500", "comment": "SIMULATED (Red Team via SET). Not detected at email gateway — out of scope."}
+  ],
+  "legendItems": [
+    {"label": "Actively Detected (auditd)", "color": "#FF0000"},
+    {"label": "Simulated / Partial", "color": "#FFA500"}
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#1a1a2e",
+  "metadata": [
+    {"name": "Project", "value": "Red & Blue Team Privilege Escalation Detection Lab"},
+    {"name": "Detection Method", "value": "Linux auditd + bash automation"},
+    {"name": "Compliance", "value": "CIS Controls 6 & 8, NIST CSF PR.AC DE.CM DE.AE"}
+  ]
+}
