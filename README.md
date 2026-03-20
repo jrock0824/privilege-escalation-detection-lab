@@ -15,8 +15,10 @@ Collaborative adversary simulation with separated red/blue team roles, mirroring
 
 | Role | Operator | Responsibilities |
 |------|----------|-----------------|
-| Red Team | Abdi | Phishing-based initial access simulation via SET |
+| Red Team | Abdi | Phishing-based initial access simulation via SET — see [red-team/README.md](red-team/README.md) |
 | Blue Team | Jaylen | Detection engineering, auditd rules, scripted analysis, IR playbooks, SOC reporting |
+
+Full threat narrative linking both sides: [docs/Threat_Narrative.md](docs/Threat_Narrative.md)
 
 ---
 
